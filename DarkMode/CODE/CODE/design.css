@@ -1,0 +1,135 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2a2a3d;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: 16px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #5c3f9f;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header img {
+    width: 100px;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #f0e6ff;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    color: #e0b3f4;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    padding: 40px;
+    margin: 0 10px;
+}
+
+.card {
+    background-color: #3e2a60;
+    border: 2px solid #4b2764;
+    border-radius: 12px;
+    text-align: center;
+    padding: 25px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card h3 {
+    color: #f0e6ff;
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #dcdcdc;
+    margin: 10px 0;
+}
+
+.price {
+    margin-top: auto;
+    font-size: 18px;
+    color: #e0b3f4;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    background-color: #4b2764;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+.card a:hover {
+    background-color: #3e1e52;
+}
+
+footer {
+    background-color: #5c3f9f;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    color: #f0e6ff;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
